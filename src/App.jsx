@@ -39,20 +39,20 @@ function App() {
     setTodos([]);
   };
 
-  // useEffect(() => {
-  //   const todos = JSON.parse(localStorage.getItem("todos"));
+  useEffect(() => {
+    const todos = JSON.parse(localStorage.getItem("todos"));
 
-  //   if (todos && todos.length > 0) {
-  //     setTodos(todos);
-  //   }
-  // }, [todos]);
+    if (todos && todos.length > 0) {
+      setTodos(todos);
+    }
+  }, [todos]);
 
-  // useEffect(() => {
-  //   const todosJSON = JSON.stringify(todos);
+  useEffect(() => {
+    const todosJSON = JSON.stringify(todos);
 
-  //   // Save the JSON string in local storage under the key "todos"
-  //   localStorage.setItem("todos", todosJSON);
-  // }, [todos]);
+    // Save the JSON string in local storage under the key "todos"
+    localStorage.setItem("todos", todosJSON);
+  }, [todos]);
 
   return (
     <TodoProvider
